@@ -135,20 +135,35 @@
   onScrollCta();
 
   /* ---------- Contact form ---------- */
-  // NOTE: no backend wired. Replace this with a Formspree endpoint,
-  //       Netlify Forms (add data-netlify="true" to <form>), or EmailJS call.
+  // Auto-detects whether the Formspree endpoint has been wired.
+  // While the action still contains the REPLACE_WITH_ placeholder,
+  // we intercept the submit and show a friendly success message
+  // without actually sending. Once the client pastes their real
+  // Formspree URL, we let the browser submit normally — Formspree
+  // handles the rest (email delivery, spam filtering, thank-you page).
   const form = $("#contact-form");
   const status = $("#form-status");
   if (form) {
+    const isWired = !form.action.includes("REPLACE_WITH_");
+
     form.addEventListener("submit", (e) => {
-      e.preventDefault();
       if (!form.checkValidity()) {
+        e.preventDefault();
         form.reportValidity();
         return;
       }
-      // TODO: replace with real submission logic
-      status.textContent = "Thanks — your enquiry has been received. We'll be in touch shortly.";
-      form.reset();
+
+      if (!isWired) {
+        // Stub mode — pre-handoff. Don't submit; show a friendly note.
+        e.preventDefault();
+        status.textContent = "Thanks — we've got your details. We'll be in touch shortly.";
+        form.reset();
+        return;
+      }
+
+      // Wired mode — let the browser submit to Formspree as normal.
+      // Show a brief in-flight message; Formspree returns a thank-you page.
+      status.textContent = "Sending…";
     });
   }
 })();

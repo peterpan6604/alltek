@@ -47,7 +47,7 @@
     "description": "Professional plastering and rendering services across Barnsley, Wakefield and Yorkshire",
     "url": "https://alltekplastering.co.uk",
     "image": "https://alltekplastering.co.uk/images/logo.jpg",
-    "telephone": "PLACEHOLDER",
+    "telephone": "+447507851590",
     "email": "PLACEHOLDER",
     "address": {
       "@type": "PostalAddress",
@@ -356,7 +356,7 @@
           <ul class="contact__list">
             <li>
               <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 4h4l2 5-2 1a12 12 0 005 5l1-2 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              <a href="tel:07000000000">07XXX XXX XXX</a>
+              <a href="tel:+447507851590">07507 851590</a>
             </li>
             <li>
               <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="5" width="18" height="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
@@ -370,13 +370,24 @@
         </div>
 
         <!--
-          NOTE: this form has no backend.
-          Options to wire it up:
-            • Formspree     — change <form action> to your Formspree endpoint
-            • Netlify Forms — add `data-netlify="true"` and host on Netlify
-            • EmailJS       — load EmailJS in main.js and intercept submit
+          ============================================================
+          CONTACT FORM WIRING — handoff checklist for the client
+          ============================================================
+          1. Sign up at https://formspree.io (free tier = 50 enquiries/mo)
+          2. Verify the email you signed up with — enquiries land there
+          3. Create a new form, name it "Alltek Website"
+          4. Copy the endpoint URL (looks like https://formspree.io/f/xyzabc)
+          5. Replace REPLACE_WITH_FORMSPREE_ENDPOINT below with that URL
+          6. Commit + push. Done.
+
+          The JS auto-detects the placeholder — until step 5, the form
+          shows a friendly success message but doesn't actually send.
+          Honeypot field (_gotcha) is already wired for spam protection.
+          ============================================================
         -->
-        <form class="contact__form" id="contact-form" action="#" method="post" novalidate>
+        <form class="contact__form" id="contact-form"
+              action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ENDPOINT"
+              method="post" novalidate>
           <div class="field">
             <label for="f-name">Name</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required />
@@ -405,6 +416,11 @@
             <label for="f-message">Message</label>
             <textarea id="f-message" name="message" rows="5" required></textarea>
           </div>
+          <!-- Honeypot: hidden from humans, bots fill it in and get rejected -->
+          <div class="field field--hp" aria-hidden="true">
+            <label for="f-website">Website (leave blank)</label>
+            <input id="f-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+          </div>
           <button type="submit" class="btn btn--gold btn--block">Send Enquiry</button>
           <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
         </form>
@@ -431,7 +447,7 @@
   </footer>
 
   <!-- ============ FLOATING MOBILE CTA ============ -->
-  <a href="tel:07000000000" class="mobile-cta" id="mobile-cta" aria-label="Call Alltek now">Call Now</a>
+  <a href="tel:+447507851590" class="mobile-cta" id="mobile-cta" aria-label="Call Alltek now">Call Now</a>
 
   <script src="js/main.js" defer></script>
 </body>

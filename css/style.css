@@ -757,6 +757,15 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 @media (max-width: 600px) { .contact__form { grid-template-columns: 1fr; } }
 
+/* Honeypot — visually hidden but still in the DOM for bots to fill */
+.field--hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* ---------- 10. Footer ---------- */
 .footer {
   background: var(--black);
