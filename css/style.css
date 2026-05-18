@@ -766,6 +766,64 @@ ul { margin: 0; padding: 0; list-style: none; }
   overflow: hidden;
 }
 
+/* ---------- Contact social buttons ---------- */
+.contact__or {
+  margin: 32px 0 12px;
+  font-family: var(--font-cond);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(245,245,243,.5);
+}
+.contact__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-family: var(--font-cond);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: transform .25s var(--ease), filter .25s var(--ease), box-shadow .25s var(--ease);
+  will-change: transform;
+}
+.social-btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+.social-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.social-btn--whatsapp { background: #25D366; color: #fff; }
+.social-btn--facebook { background: #1877F2; color: #fff; }
+
+/* ---------- Footer socials ---------- */
+.footer__socials {
+  display: inline-flex;
+  gap: 14px;
+}
+.footer__socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: rgba(245,245,243,.7);
+  border: 1px solid rgba(212,168,67,.3);
+  transition: color .2s var(--ease), background-color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease);
+}
+.footer__socials a:hover {
+  color: var(--deep-black);
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
 /* ---------- 10. Footer ---------- */
 .footer {
   background: var(--black);
