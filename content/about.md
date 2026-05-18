@@ -29,9 +29,7 @@ Reference any guarantee on workmanship.
 
 ## Hard facts
 
-- **Years experience:** TODO (currently shown as "10+" in hero/trust bar)
-- **Jobs completed:** TODO (currently "500+")
-- **Insurance:** TODO — public liability cover with [insurer], £X million
-- **Companies House:** Alltek Plastering & Rendering Ltd, company no. TODO
-- **VAT number:** TODO (or note "not VAT registered" if applicable)
+- **Years experience:** 20+
+- **Jobs completed:** 1,000+
+- **Insurance:** Public liability cover (figure not disclosed)
 - **Trade memberships:** TODO — e.g. CSCS, FMB, TrustMark, Checkatrade
