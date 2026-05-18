@@ -27,31 +27,15 @@ Suggested filenames:
 - `gallery-05.jpg` — dry-lined room
 - `gallery-06.jpg` — patch repair
 
-## Reviews / testimonials (screenshots)
+## Reviews / testimonials
 
-The testimonials section uses **screenshot images** of real Facebook /
-Google reviews — much more credible than typed-out quotes.
+Testimonials are displayed as **text cards**, not images — better SEO,
+faster loading, and the text has already been transcribed.
 
-Drop screenshots here named:
-
-- `review-01.jpg`
-- `review-02.jpg`
-- `review-03.jpg`
-- `review-04.jpg`
-- `review-05.jpg`
-- `review-06.jpg`
-
-You can use 3, 4, 5 or 6 — any missing files are auto-hidden, no
-markup changes needed. Mix tall (full reviews) and short (one-liner)
-screenshots for visual rhythm in the masonry grid.
-
-**Capture tips:**
-
-- Crop tight — remove the FB / Google chrome where it doesn't add to
-  credibility, but **keep** the star rating, reviewer name and
-  platform logo (those *do* add credibility)
-- Save at ~800px wide, JPG quality 80 — keeps file size under 100 KB
-- Avoid blurry zoomed-in screenshots — recapture from a fresh view
+Source text lives in [`../content/testimonials.md`](../content/testimonials.md).
+To add a new review, duplicate one `<figure class="review-card">…</figure>`
+block in section 7 of [`../index.html`](../index.html) and update the text,
+name, and date.
 
 ## About section photo
 

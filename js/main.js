@@ -125,16 +125,6 @@
     }, { passive: true });
   }
 
-  /* ---------- Hide review cards whose image is missing ---------- */
-  // Lets the client drop in 3, 4, 5 or 6 review screenshots without
-  // editing markup — any card whose image file 404s disappears cleanly.
-  $$(".review-card img").forEach(img => {
-    img.addEventListener("error", () => {
-      const card = img.closest(".review-card");
-      if (card) card.style.display = "none";
-    });
-  });
-
   /* ---------- Floating mobile CTA ---------- */
   const mobileCta = $("#mobile-cta");
   const onScrollCta = () => {
