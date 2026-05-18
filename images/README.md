@@ -27,6 +27,32 @@ Suggested filenames:
 - `gallery-05.jpg` — dry-lined room
 - `gallery-06.jpg` — patch repair
 
+## Reviews / testimonials (screenshots)
+
+The testimonials section uses **screenshot images** of real Facebook /
+Google reviews — much more credible than typed-out quotes.
+
+Drop screenshots here named:
+
+- `review-01.jpg`
+- `review-02.jpg`
+- `review-03.jpg`
+- `review-04.jpg`
+- `review-05.jpg`
+- `review-06.jpg`
+
+You can use 3, 4, 5 or 6 — any missing files are auto-hidden, no
+markup changes needed. Mix tall (full reviews) and short (one-liner)
+screenshots for visual rhythm in the masonry grid.
+
+**Capture tips:**
+
+- Crop tight — remove the FB / Google chrome where it doesn't add to
+  credibility, but **keep** the star rating, reviewer name and
+  platform logo (those *do* add credibility)
+- Save at ~800px wide, JPG quality 80 — keeps file size under 100 KB
+- Avoid blurry zoomed-in screenshots — recapture from a fresh view
+
 ## About section photo
 
 The about section currently uses a placeholder. Add `about.jpg` (a clean shot
