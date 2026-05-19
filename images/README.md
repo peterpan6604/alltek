@@ -7,7 +7,7 @@ Originals + reserves sit in subfolders (gitignored, local-only).
 
 | Filename         | Where it's used                                    |
 | ---------------- | -------------------------------------------------- |
-| `logo.jpg`       | Nav (top-left), footer, JSON-LD schema             |
+| `logo.png`       | Nav (top-left), hero, footer, JSON-LD schema       |
 | `about.jpg`      | About section — fresh plaster on the Darfield job  |
 | `gallery-01.jpg` | Gallery — full-house monocouche render             |
 | `gallery-02.jpg` | Gallery — bespoke garden render with planters      |
