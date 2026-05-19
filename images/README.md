@@ -15,6 +15,9 @@ Originals + reserves sit in subfolders (gitignored, local-only).
 | `gallery-04.jpg` | Gallery — commercial drylining / partition wall    |
 | `gallery-05.jpg` | Gallery — freshly overboarded and skimmed ceiling  |
 | `gallery-06.jpg` | Gallery — small silicone-rendered outbuilding      |
+| `gallery-07.jpg` | Gallery — kitchen ceiling fresh skim (artex cover) |
+| `gallery-08.jpg` | Gallery — bedroom walls + ceiling freshly plastered |
+| `gallery-09.jpg` | Gallery — neat patch repair around an alcove       |
 
 ## Local-only (gitignored)
 
