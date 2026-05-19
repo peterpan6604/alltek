@@ -342,6 +342,35 @@ ul { margin: 0; padding: 0; list-style: none; }
 @keyframes hero-slide { to { opacity: 1; transform: translateY(0); } }
 @keyframes bounce     { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
 
+/* ---------- Award strip (between hero and trust bar) ---------- */
+.award-strip {
+  background: var(--deep-black);
+  padding: 16px var(--gutter);
+  text-align: center;
+  border-top: 1px solid rgba(212, 168, 67, .25);
+  border-bottom: 1px solid rgba(212, 168, 67, .25);
+}
+.award-strip__inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-cond);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.award-strip__icon { flex-shrink: 0; }
+@media (max-width: 600px) {
+  .award-strip__inner {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 /* ---------- 3. Trust bar ---------- */
 .trust {
   background: var(--dark-2);
@@ -493,6 +522,23 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0 0 16px;
   max-width: 56ch;
 }
+.award-mention {
+  padding: 16px 20px;
+  border-left: 3px solid var(--gold);
+  background: rgba(212, 168, 67, .08);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  max-width: 56ch;
+}
+.award-mention__star {
+  color: var(--gold);
+  font-size: 20px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+.award-mention strong { color: var(--charcoal); }
+
 .credentials {
   display: flex;
   flex-wrap: wrap;

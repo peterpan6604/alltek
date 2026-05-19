@@ -1,73 +1,67 @@
 ---
 section: services
-status: placeholder
+status: real
+source: owner brief (2026-05-19)
 ---
 
 # Services
 
-Six core services shown in the grid on the homepage. Each card holds a short
-2-line description. Replace the placeholder copy below with the real text and
-paste it into [`index.html`](../index.html) section 4 (services).
+Five real service categories Alltek offers, per the owner brief.
+Earlier scaffold included Coving & Cornicing and Pebbledash & Roughcast —
+both removed because Alltek doesn't take that work. The site should not
+advertise services the team won't deliver.
 
 ---
 
-## 1. Skimming & Plastering
+## 1. Plastering
 
-> Smooth, paint-ready finishes on new walls and ceilings or over tired
-> existing surfaces.
+> New builds, conversions, reskims, renovations, patch work and artex
+> cover-up — paint-ready finishes throughout.
 
-**Detail:** Two-coat skim over backing plaster or plasterboard.
-British Gypsum Multifinish as standard. Ready for decoration in 5–7 days.
-Typical room turnaround: 1 day.
+Includes: skim coats, two-coat plaster, full re-plasters, patch repairs,
+artex cover/removal. Domestic and commercial.
 
-## 2. External Rendering
+## 2. Drylining
 
-> Silicone, monocouche and traditional sand & cement render — weatherproof
-> and built to last.
+> MF ceilings and partitions, insulation boarding, fire boarding and
+> sound boarding — domestic and commercial.
 
-**Detail:** Through-coloured silicone systems (K-Rend / Weber) for low
-maintenance, or a budget-friendly sand & cement finish. Includes mesh
-reinforcement, beading and a 10-year manufacturer guarantee on system render.
+MF (metal frame) ceiling systems, plasterboard stud partitions,
+acoustic and fire-rated board systems. Common for schools, offices,
+care homes and extensions.
 
-## 3. Dry Lining
+## 3. Grid Ceiling
 
-> Plasterboard installation, stud walls and tape-and-jointing for a clean
-> modern finish.
+> Full tile and grid installations, re-tiles and repairs — offices,
+> schools and commercial spaces.
 
-**Detail:** Metal or timber stud partitions, insulated plasterboard for
-solid walls, taped-and-jointed seamless finish. Ideal for extensions,
-loft conversions and commercial fit-outs.
+Suspended ceiling tile-and-grid systems. Full installs from scratch,
+re-tiling existing grids, single-tile repairs after water damage.
 
-## 4. Coving & Cornicing
+## 4. Rendering
 
-> Traditional and modern plaster coving fitted neatly to bring character
-> to any room.
+> Modern render systems — silicone, acrylic and monocouche.
+> Weatherproof, low-maintenance, manufacturer guaranteed.
 
-**Detail:** Plain C-profile coving through to ornate Victorian and Georgian
-cornice. Mitres cut on site, joints filled, ready for paint.
+External wall finishes only. Through-coloured silicone and acrylic
+systems for low maintenance; monocouche for a traditional look with
+modern performance. **Note:** Alltek does NOT offer pebbledash or
+sand-and-cement render.
 
-## 5. Pebbledash & Roughcast
+## 5. Insulation
 
-> Hard-wearing decorative render that protects walls from the harshest
-> Yorkshire weather.
+> Loft insulation, Kingspan and Rockwool — fitted on new-build and
+> renovation work for warmer, quieter homes.
 
-**Detail:** Traditional pebbledash on a sand & cement base coat using
-graded stone. Excellent durability and a classic Yorkshire look. Patch
-matching available on older properties.
-
-## 6. Patch Repairs
-
-> Cracks, blown plaster and damp damage repaired discreetly — small jobs
-> welcome.
-
-**Detail:** No job too small. Wall and ceiling patches feathered in to
-match the surrounding finish. Damp source must be addressed first — happy
-to advise.
+Loft top-up insulation, Kingspan PIR boards, Rockwool batts. Usually
+fitted alongside other work on a job rather than as a standalone visit.
 
 ---
 
-## Copy notes
+## Sectors served
 
-- Keep card descriptions to **two short lines** so the grid stays even.
-- Use the longer "Detail" text on individual service pages if/when added.
-- TODO: confirm specific product brands and guarantees with the business.
+- Domestic — homeowners, renovations, extensions, bespoke houses
+- New-build housing developments (Redrow Seal of Excellence on Meadow Vale)
+- Care homes
+- Schools and educational
+- Commercial / offices (grid ceilings)
