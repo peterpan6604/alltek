@@ -1,0 +1,11 @@
+# Local-only photo archives. The curated, web-ready images at
+# clean filenames (about.jpg, gallery-01.jpg, etc.) are committed —
+# these subfolders hold the originals and unused alternates.
+images/ALLTEK photos/
+images/Reserve photos/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/

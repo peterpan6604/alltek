@@ -511,6 +511,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   text-transform: uppercase;
   font-size: 14px;
 }
+.about__photo {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid rgba(212,168,67,.2);
+  display: block;
+}
 .about__copy {
   background: var(--off-white);
   color: var(--charcoal);
@@ -582,36 +590,17 @@ ul { margin: 0; padding: 0; list-style: none; }
   break-inside: avoid;
   background: #1f1f1f;
   border: 1px solid rgba(212,168,67,.12);
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   cursor: pointer;
 }
-.gallery__tile--medium { height: 320px; }
-.gallery__tile--tall   { height: 400px; }
-.gallery__tile > span {
-  font-family: var(--font-cond);
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold);
+.gallery__tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .5s var(--ease);
+  will-change: transform;
 }
-.gallery__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(212,168,67,.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--off-white);
-  opacity: 0;
-  transition: opacity .25s var(--ease);
-}
-.gallery__tile:hover .gallery__overlay,
-.gallery__tile:focus-within .gallery__overlay { opacity: 1; }
+.gallery__tile:hover img { transform: scale(1.04); }
 .gallery__cta { text-align: center; margin-top: 32px; }
 
 /* ---------- 7. Testimonials (review screenshot masonry) ---------- */

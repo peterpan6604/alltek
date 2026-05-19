@@ -1,50 +1,39 @@
 # Images
 
-Drop the following assets into this folder. All paths in `index.html` already
-point here — replace the files with real ones, no markup changes needed.
+Web-ready images sit at the root of this folder with clean filenames.
+Originals + reserves sit in subfolders (gitignored, local-only).
 
-## Required
+## Live on the site
 
-| Filename               | Purpose                                  | Notes                              |
-| ---------------------- | ---------------------------------------- | ---------------------------------- |
-| `logo.png`             | Circular Alltek badge (nav + footer)     | Square, transparent or dark bg, ~512×512 |
-| `favicon.png`          | Browser tab icon                         | 32×32 PNG                          |
-| `apple-touch-icon.png` | iOS home-screen icon                     | 180×180 PNG                        |
-| `og.jpg`               | Social share preview                     | 1200×630, JPG, < 300 KB            |
+| Filename         | Where it's used                                    |
+| ---------------- | -------------------------------------------------- |
+| `logo.jpg`       | Nav (top-left), footer, JSON-LD schema             |
+| `about.jpg`      | About section — fresh plaster on the Darfield job  |
+| `gallery-01.jpg` | Gallery — full-house monocouche render             |
+| `gallery-02.jpg` | Gallery — bespoke garden render with planters      |
+| `gallery-03.jpg` | Gallery — commercial tile-and-grid ceiling         |
+| `gallery-04.jpg` | Gallery — commercial drylining / partition wall    |
+| `gallery-05.jpg` | Gallery — freshly overboarded and skimmed ceiling  |
+| `gallery-06.jpg` | Gallery — small silicone-rendered outbuilding      |
 
-## Gallery (replace placeholder tiles)
+## Local-only (gitignored)
 
-Drop 6+ photos here and update the markup in [`index.html`](../index.html)
-section 6 (gallery) — swap each `<figure class="gallery__tile">` for an
-`<img loading="lazy" alt="…">` inside the figure.
+- `ALLTEK photos/` — the full set Ross supplied (originals)
+- `ALLTEK photos/Reserve photos/` — alternates not currently used
 
-Suggested filenames:
+## Swapping a gallery image
 
-- `gallery-01.jpg` — recent skim (before/after)
-- `gallery-02.jpg` — silicone render
-- `gallery-03.jpg` — coving close-up
-- `gallery-04.jpg` — pebbledash exterior
-- `gallery-05.jpg` — dry-lined room
-- `gallery-06.jpg` — patch repair
+1. Drop a new photo into the root of `images/` named, e.g., `gallery-02.jpg`
+   (overwrite the existing file)
+2. If the new shot has noticeably different aspect ratio, the masonry
+   may stagger differently — that's fine
+3. **Update the `alt` text** in `index.html` (section 6) to describe the
+   new photo accurately. Don't leave the old description in place.
+4. Commit + push
 
-## Reviews / testimonials
+## Still missing
 
-Testimonials are displayed as **text cards**, not images — better SEO,
-faster loading, and the text has already been transcribed.
-
-Source text lives in [`../content/testimonials.md`](../content/testimonials.md).
-To add a new review, duplicate one `<figure class="review-card">…</figure>`
-block in section 7 of [`../index.html`](../index.html) and update the text,
-name, and date.
-
-## About section photo
-
-The about section currently uses a placeholder. Add `about.jpg` (a clean shot
-of the team or a finished job) and replace the `.about__photo-placeholder`
-`<div>` with an `<img>`.
-
-## Optimisation tips
-
-- Export JPGs at quality 80 and run through Squoosh / ImageOptim.
-- Target < 200 KB per gallery image, < 400 KB for hero/about.
-- Use descriptive alt text — it's both accessibility and SEO.
+- `favicon.png` — 32×32 browser tab icon
+- `apple-touch-icon.png` — 180×180 iOS home-screen icon
+- `og.jpg` — 1200×630 social-share preview image
+- A portrait of Ross — useful if a dedicated "Meet Ross" block gets added
