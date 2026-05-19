@@ -8,7 +8,7 @@ status: in-progress
 ## Primary
 
 - **Phone:** 07507 851590  ✅ wired into the site
-- **Email:** TODO (e.g. `info@alltekplastering.co.uk`)
+- **Email:** `alltekplastering@gmail.com` ✅ wired into the site
 - **Website:** https://peterpan6604.github.io/alltek/ (custom domain TBC)
 
 ## Address
@@ -51,7 +51,7 @@ field on the form. Formspree's free tier does not accept file uploads
 
 1. Go to https://web3forms.com and click **Create your Access Key**
 2. Enter the email address where enquiries should arrive
-   (e.g. `info@alltekplastering.co.uk`) — they email a free access key
+   (`alltekplastering@gmail.com`) — they email a free access key
 3. Copy the access key from the email
 4. In [`index.html`](../index.html) section 9 (contact form):
    a. Change `action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ENDPOINT"`
