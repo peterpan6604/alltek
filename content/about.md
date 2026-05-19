@@ -18,8 +18,8 @@ source: owner brief (2026-05-19), edited for web by Peter
 > acrylic, monocouche — alongside MF ceilings, grid ceilings, fire and
 > sound boarding. The proper way, finished tidy, on schedule.
 >
-> ★ **Awarded Redrow's Seal of Excellence** on the Meadow Vale development
-> — recognition that our workmanship meets the housebuilder's toughest
+> ★ **Awarded the NHBC Seal of Excellence** at Redrow Yorkshire —
+> recognition that our workmanship meets the industry's toughest
 > quality standards.
 
 ## Editorial decisions
@@ -27,7 +27,7 @@ source: owner brief (2026-05-19), edited for web by Peter
 - Dropped the "small, newly formed business" phrasing from the owner's
   LinkedIn copy. It contradicts the 20+ years experience claim and gives
   customers pause. Honest framing: experienced trade, fresh banner.
-- Surfaced the Redrow Seal of Excellence prominently — it's the strongest
+- Surfaced the NHBC Seal of Excellence (won at Redrow Yorkshire) prominently — it's the strongest
   single trust signal in the brief.
 - Added a small award strip between the hero and trust bar so the
   recognition is visible above the fold, even before scrolling to about.
@@ -42,7 +42,7 @@ source: owner brief (2026-05-19), edited for web by Peter
 - **Years experience:** 20+
 - **Jobs completed:** 1,000+
 - **Insurance:** Public liability cover (figure not disclosed)
-- **Awards:** Redrow Seal of Excellence — Meadow Vale development
+- **Awards:** NHBC Seal of Excellence — awarded at Redrow Yorkshire
 - **Trade memberships:** TODO — e.g. CSCS, FMB, TrustMark, Checkatrade
 
 ## Source material from owner

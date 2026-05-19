@@ -45,23 +45,32 @@ client owns the destination inbox, so they wire it at handoff.
 
 ## What the client does (one-time, ~5 minutes)
 
-1. Go to https://formspree.io and click **Get Started**
-2. Sign up with the email address where enquiries should arrive
-   (e.g. `info@alltekplastering.co.uk`)
-3. Click the verification link sent to that inbox
-4. From the dashboard → **New Form** → name it `Alltek Website` → Create
-5. Copy the endpoint URL (looks like `https://formspree.io/f/xyzabc123`)
-6. In [`index.html`](../index.html), replace `REPLACE_WITH_FORMSPREE_ENDPOINT`
-   with that URL (one occurrence)
-7. Commit + push. Form is live.
+**Recommended backend: Web3Forms** (free, supports the photo-upload
+field on the form. Formspree's free tier does not accept file uploads
+— their paid tier does, at £8/mo.)
 
-## Why Formspree
+1. Go to https://web3forms.com and click **Create your Access Key**
+2. Enter the email address where enquiries should arrive
+   (e.g. `info@alltekplastering.co.uk`) — they email a free access key
+3. Copy the access key from the email
+4. In [`index.html`](../index.html) section 9 (contact form):
+   a. Change `action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ENDPOINT"`
+      to `action="https://api.web3forms.com/submit"`
+   b. Add a hidden input near the top of the form (just after `<form …>`):
+      `<input type="hidden" name="access_key" value="THE_KEY_FROM_EMAIL">`
+5. Commit + push. Form is live with photo support.
 
-- Free tier covers 50 submissions/month (plenty for a local trade)
-- No server, no backend, works on GitHub Pages
-- Built-in spam filtering + email-confirmed delivery
-- Client owns the account, so they control where enquiries go without
-  developer involvement
+## Why Web3Forms (over Formspree)
+
+- **Free tier supports file uploads** (5MB per file, multiple files)
+  — Formspree free tier doesn't
+- No account / dashboard — access key is delivered by email and just works
+- 250 submissions/month free (vs Formspree's 50)
+- Same simplicity for the developer: one URL, one form submit
+
+If file uploads aren't important and a more polished dashboard is, fall
+back to **Formspree paid (£8/mo)** which adds files + analytics + spam
+filtering on top of the free Formspree experience.
 
 ## Already-built spam protection
 

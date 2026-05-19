@@ -168,7 +168,7 @@
           <path fill="currentColor" d="M12 2l2.39 4.84 5.34.78-3.86 3.77.91 5.31L12 14.27 7.22 16.7l.91-5.31L4.27 7.62l5.34-.78L12 2z"/>
           <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M8 18l-1 4 5-3 5 3-1-4"/>
         </svg>
-        <span>Awarded Redrow's Seal of Excellence · Meadow Vale</span>
+        <span>Awarded NHBC Seal of Excellence · Redrow Yorkshire</span>
       </span>
     </aside>
 
@@ -256,7 +256,7 @@
         <h2 class="section-title reveal" id="about-heading">Yorkshire Craftsmanship,<br/>Every Time<span class="gold">.</span></h2>
         <p class="reveal">Alltek Plastering &amp; Rendering Ltd is a specialist plastering, rendering and drylining team working across South &amp; West Yorkshire — built on 20+ years of hands-on trade experience by founder Ross.</p>
         <p class="reveal">From new-build housing developments and care-home contracts through to renovations, extensions, schools and one-off bespoke houses, we work to the same standard whatever the scale. Modern render systems — silicone, acrylic, monocouche — alongside MF ceilings, grid ceilings, fire and sound boarding. The proper way, finished tidy, on schedule.</p>
-        <p class="reveal award-mention"><span class="award-mention__star" aria-hidden="true">★</span> <strong>Awarded Redrow's Seal of Excellence</strong> on the Meadow Vale development — recognition that our workmanship meets the housebuilder's toughest quality standards.</p>
+        <p class="reveal award-mention"><span class="award-mention__star" aria-hidden="true">★</span> <strong>Awarded the NHBC Seal of Excellence</strong> at Redrow Yorkshire — recognition that our workmanship meets the industry's toughest quality standards.</p>
 
         <ul class="credentials reveal" aria-label="Credentials">
           <li>
@@ -464,21 +464,30 @@
           ============================================================
           CONTACT FORM WIRING — handoff checklist for the client
           ============================================================
-          1. Sign up at https://formspree.io (free tier = 50 enquiries/mo)
-          2. Verify the email you signed up with — enquiries land there
-          3. Create a new form, name it "Alltek Website"
-          4. Copy the endpoint URL (looks like https://formspree.io/f/xyzabc)
-          5. Replace REPLACE_WITH_FORMSPREE_ENDPOINT below with that URL
-          6. Commit + push. Done.
+          The form now includes a photo upload field. Formspree's FREE
+          tier does NOT accept file uploads (paid only, £8/mo). Choose:
 
-          The JS auto-detects the placeholder — until step 5, the form
-          shows a friendly success message but doesn't actually send.
+          Option A — Web3Forms (free, supports file uploads up to 5MB)
+            1. Visit https://web3forms.com and request a free access key
+               (sent to whichever email enquiries should land in)
+            2. Replace REPLACE_WITH_FORMSPREE_ENDPOINT below with
+               https://api.web3forms.com/submit
+            3. Add a hidden input near the top of the form:
+               <input type="hidden" name="access_key" value="YOUR_KEY">
+
+          Option B — Formspree paid (£8/mo) if Ross prefers a more
+          established service. Same wiring as before, just paid.
+
+          Option C — drop the photo field if not needed.
+
+          The JS auto-detects the placeholder — until wired, the form
+          shows an honest 'not live yet' message and doesn't submit.
           Honeypot field (_gotcha) is already wired for spam protection.
           ============================================================
         -->
         <form class="contact__form" id="contact-form"
               action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ENDPOINT"
-              method="post" novalidate>
+              method="post" enctype="multipart/form-data" novalidate>
           <div class="field">
             <label for="f-name">Name</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required />
@@ -491,21 +500,25 @@
             <label for="f-email">Email</label>
             <input id="f-email" name="email" type="email" autocomplete="email" required />
           </div>
-          <div class="field">
+          <div class="field field--full">
             <label for="f-type">Type of work</label>
             <select id="f-type" name="type" required>
               <option value="">Please choose…</option>
-              <option>Skimming &amp; Plastering</option>
-              <option>External Rendering</option>
-              <option>Dry Lining</option>
-              <option>Coving &amp; Cornicing</option>
-              <option>Pebbledash &amp; Roughcast</option>
-              <option>Patch Repairs</option>
+              <option>Reskim or patchwork</option>
+              <option>Renovation</option>
+              <option>Extension or conversion</option>
+              <option>Commercial space</option>
+              <option>Damp repair</option>
+              <option>External rendering</option>
             </select>
           </div>
           <div class="field field--full">
             <label for="f-message">Message</label>
             <textarea id="f-message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="field field--full field--file">
+            <label for="f-photos">Photos <span class="field__hint">(optional — helps us quote accurately)</span></label>
+            <input id="f-photos" name="photos" type="file" accept="image/*" multiple />
           </div>
           <!-- Honeypot: hidden from humans, bots fill it in and get rejected -->
           <div class="field field--hp" aria-hidden="true">

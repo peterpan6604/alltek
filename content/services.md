@@ -61,7 +61,7 @@ fitted alongside other work on a job rather than as a standalone visit.
 ## Sectors served
 
 - Domestic — homeowners, renovations, extensions, bespoke houses
-- New-build housing developments (Redrow Seal of Excellence on Meadow Vale)
+- New-build housing developments (NHBC Seal of Excellence awarded at Redrow Yorkshire)
 - Care homes
 - Schools and educational
 - Commercial / offices (grid ceilings)
