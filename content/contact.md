@@ -9,7 +9,7 @@ status: in-progress
 
 - **Phone:** 07507 851590  ✅ wired into the site
 - **Email:** `alltekplastering@gmail.com` ✅ wired into the site
-- **Website:** https://peterpan6604.github.io/alltek/ (custom domain TBC)
+- **Website:** https://alltekplastering.co.uk
 
 ## Address
 
