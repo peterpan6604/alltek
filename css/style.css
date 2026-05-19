@@ -830,6 +830,15 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-color: var(--gold);
   background: rgba(212,168,67,.06);
 }
+/* Dropdown options render on the OS panel (white background by default),
+   so force readable dark-on-white inside the menu */
+.field select option {
+  background-color: var(--white);
+  color: var(--charcoal);
+}
+.field select option[value=""] {
+  color: var(--mid-grey);
+}
 .field__hint {
   font-family: var(--font-body);
   font-weight: 300;
