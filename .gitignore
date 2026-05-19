@@ -4,6 +4,10 @@
 images/ALLTEK photos/
 images/Reserve photos/
 
+# Internal handoff / client-facing notes — local only, never pushed
+content/handoff-to-ross.md
+content/handoff-*.md
+
 # OS / editor noise
 .DS_Store
 Thumbs.db

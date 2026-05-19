@@ -154,10 +154,10 @@
       }
 
       if (!isWired) {
-        // Stub mode — pre-handoff. Don't submit; show a friendly note.
+        // Stub mode — pre-handoff. Don't submit; tell the user honestly
+        // that the form isn't active and steer them to working channels.
         e.preventDefault();
-        status.textContent = "Thanks — we've got your details. We'll be in touch shortly.";
-        form.reset();
+        status.textContent = "Our contact form isn't live yet — please call 07507 851590 or message us on WhatsApp / Facebook. We'll get back to you fast.";
         return;
       }
 
