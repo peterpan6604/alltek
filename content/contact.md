@@ -36,12 +36,18 @@ United Kingdom
 
 ---
 
-# Contact form — handoff wiring
+# Contact form — wiring
 
-**Status:** form is built, validated, spam-protected, and styled.
-The submit handler is in **stub mode** — it shows a "Thanks" message
-but doesn't actually send anything yet. This is intentional: the
-client owns the destination inbox, so they wire it at handoff.
+**Status:** ✅ live. Wired to Web3Forms, posting to
+`alltekplastering@gmail.com`. AJAX submission keeps the user on
+the page.
+
+**Photo uploads:** the photo field was removed because Web3Forms'
+free tier doesn't support file uploads (Pro feature only). Instead,
+a styled note below the form directs customers to send photos via
+WhatsApp — natural workflow for trade enquiries, no third-party
+backend cost. Photos arrive in Ross's WhatsApp (already prominent
+on the site) where he can ask follow-up questions easily.
 
 ## What the client does (one-time, ~5 minutes)
 

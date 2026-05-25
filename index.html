@@ -460,12 +460,19 @@
 
         <!--
           ============================================================
-          CONTACT FORM — wired to Web3Forms (free tier, photo uploads)
+          CONTACT FORM — wired to Web3Forms (free tier)
           ============================================================
           Submissions land in alltekplastering@gmail.com. The access_key
           below is the public-by-design Web3Forms identifier (safe to
           commit publicly — it only grants submit-to-this-form ability).
           To swap inbox: regenerate the key at web3forms.com.
+
+          NOTE: Web3Forms free tier does not accept file uploads (Pro
+          feature only). Photos are intentionally directed to WhatsApp
+          via the note below the form. If file uploads become essential
+          later, options: pay Web3Forms Pro (~$10/mo), switch to
+          FormSubmit (free + files), or migrate hosting to Netlify
+          (Netlify Forms free + files).
 
           Submission is AJAX via fetch (see js/main.js) — user stays on
           the site and sees an in-page success message instead of being
@@ -476,7 +483,7 @@
         -->
         <form class="contact__form" id="contact-form"
               action="https://api.web3forms.com/submit"
-              method="post" enctype="multipart/form-data" novalidate>
+              method="post" novalidate>
           <input type="hidden" name="access_key" value="887c7cc3-686d-41f9-bb26-492f06bac74e" />
           <input type="hidden" name="from_name" value="Alltek Website" />
           <input type="hidden" name="subject" value="New enquiry from alltekplastering.co.uk" />
@@ -508,10 +515,6 @@
             <label for="f-message">Message</label>
             <textarea id="f-message" name="message" rows="5" required></textarea>
           </div>
-          <div class="field field--full field--file">
-            <label for="f-photos">Photos <span class="field__hint">(optional · max 5MB each · helps us quote accurately)</span></label>
-            <input id="f-photos" name="photos" type="file" accept="image/*" multiple />
-          </div>
           <!-- Honeypot: hidden from humans, bots fill it in and get rejected -->
           <div class="field field--hp" aria-hidden="true">
             <label for="f-website">Website (leave blank)</label>
@@ -519,6 +522,10 @@
           </div>
           <button type="submit" class="btn btn--gold btn--block">Send Enquiry</button>
           <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form__photos-note">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M9 3l-2 2H4a2 2 0 00-2 2v11a2 2 0 002 2h16a2 2 0 002-2V7a2 2 0 00-2-2h-3l-2-2H9zm3 5a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+            Got photos of the job? <a href="https://wa.me/447507851590?text=Hi%2C%20I%27d%20like%20a%20quote.%20Here%20are%20some%20photos%20of%20the%20job%3A" target="_blank" rel="noopener">Send them via WhatsApp</a> — quicker than the form and we can ask follow-up questions easily.
+          </p>
         </form>
       </div>
     </section>
