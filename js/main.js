@@ -135,35 +135,58 @@
   onScrollCta();
 
   /* ---------- Contact form ---------- */
-  // Auto-detects whether the Formspree endpoint has been wired.
-  // While the action still contains the REPLACE_WITH_ placeholder,
-  // we intercept the submit and show a friendly success message
-  // without actually sending. Once the client pastes their real
-  // Formspree URL, we let the browser submit normally — Formspree
-  // handles the rest (email delivery, spam filtering, thank-you page).
+  // Auto-detects whether the backend has been wired (Web3Forms).
+  // Stub mode (placeholder URL): show an honest 'not live' message.
+  // Wired mode: AJAX submit so the user stays on the site and sees
+  // an in-page success message instead of Web3Forms' default redirect.
   const form = $("#contact-form");
   const status = $("#form-status");
   if (form) {
     const isWired = !form.action.includes("REPLACE_WITH_");
+    const submitBtn = form.querySelector("button[type='submit']");
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
       if (!form.checkValidity()) {
-        e.preventDefault();
         form.reportValidity();
         return;
       }
 
       if (!isWired) {
-        // Stub mode — pre-handoff. Don't submit; tell the user honestly
-        // that the form isn't active and steer them to working channels.
-        e.preventDefault();
         status.textContent = "Our contact form isn't live yet — please call 07507 851590 or message us on WhatsApp / Facebook. We'll get back to you fast.";
         return;
       }
 
-      // Wired mode — let the browser submit to Formspree as normal.
-      // Show a brief in-flight message; Formspree returns a thank-you page.
-      status.textContent = "Sending…";
+      // Wired mode — submit via fetch so the user stays on the page.
+      const originalLabel = submitBtn ? submitBtn.textContent : null;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+      }
+      status.textContent = "";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+        });
+        const json = await response.json().catch(() => ({}));
+
+        if (response.ok && json.success !== false) {
+          status.textContent = "Thanks — your enquiry's been sent. We'll be in touch shortly.";
+          form.reset();
+        } else {
+          status.textContent = "Sorry — something went wrong sending that. Please call 07507 851590 or message on WhatsApp instead.";
+        }
+      } catch (err) {
+        status.textContent = "Network error — please check your connection or call us on 07507 851590.";
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalLabel;
+        }
+      }
     });
   }
 })();

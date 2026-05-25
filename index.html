@@ -460,32 +460,26 @@
 
         <!--
           ============================================================
-          CONTACT FORM WIRING — handoff checklist for the client
+          CONTACT FORM — wired to Web3Forms (free tier, photo uploads)
           ============================================================
-          The form now includes a photo upload field. Formspree's FREE
-          tier does NOT accept file uploads (paid only, £8/mo). Choose:
+          Submissions land in alltekplastering@gmail.com. The access_key
+          below is the public-by-design Web3Forms identifier (safe to
+          commit publicly — it only grants submit-to-this-form ability).
+          To swap inbox: regenerate the key at web3forms.com.
 
-          Option A — Web3Forms (free, supports file uploads up to 5MB)
-            1. Visit https://web3forms.com and request a free access key
-               (sent to whichever email enquiries should land in)
-            2. Replace REPLACE_WITH_FORMSPREE_ENDPOINT below with
-               https://api.web3forms.com/submit
-            3. Add a hidden input near the top of the form:
-               <input type="hidden" name="access_key" value="YOUR_KEY">
+          Submission is AJAX via fetch (see js/main.js) — user stays on
+          the site and sees an in-page success message instead of being
+          bounced to Web3Forms' generic thank-you page.
 
-          Option B — Formspree paid (£8/mo) if Ross prefers a more
-          established service. Same wiring as before, just paid.
-
-          Option C — drop the photo field if not needed.
-
-          The JS auto-detects the placeholder — until wired, the form
-          shows an honest 'not live yet' message and doesn't submit.
-          Honeypot field (_gotcha) is already wired for spam protection.
+          Spam protection: honeypot field (_gotcha) + HTML5 validation.
           ============================================================
         -->
         <form class="contact__form" id="contact-form"
-              action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ENDPOINT"
+              action="https://api.web3forms.com/submit"
               method="post" enctype="multipart/form-data" novalidate>
+          <input type="hidden" name="access_key" value="887c7cc3-686d-41f9-bb26-492f06bac74e" />
+          <input type="hidden" name="from_name" value="Alltek Website" />
+          <input type="hidden" name="subject" value="New enquiry from alltekplastering.co.uk" />
           <div class="field">
             <label for="f-name">Name</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required />
